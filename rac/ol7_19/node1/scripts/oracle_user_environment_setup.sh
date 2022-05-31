@@ -67,7 +67,7 @@ cd ~/.ssh
 rm -f *
 cat /dev/zero | ssh-keygen -t dsa -q -N "" > /dev/null
 cat id_dsa.pub >> authorized_keys
-ssh ${NODE1_HOSTNAME} date
+ssh -o StrictHostKeyChecking=no ${NODE1_HOSTNAME} date
 echo "${ORACLE_PASSWORD}" > /tmp/temp2.txt
 
 ssh-keyscan -H ${NODE1_HOSTNAME} >> ~/.ssh/known_hosts

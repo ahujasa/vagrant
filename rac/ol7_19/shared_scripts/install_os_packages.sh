@@ -2,6 +2,12 @@ echo "**************************************************************************
 echo "Prepare yum repos and install base packages." `date`
 echo "******************************************************************************"
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+echo "******************************************************************************"
+echo "Setup proxy." `date`
+echo "******************************************************************************"
+tee -a /etc/yum.conf <<EOF
+proxy=http://www-proxy.us.oracle.com:80
+EOF
 
 yum install -y yum-utils
 yum install -y oracle-epel-release-el7
