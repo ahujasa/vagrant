@@ -1,5 +1,7 @@
 . /vagrant_config/install.env
-
+echo $SCAN_NAME
+echo $SCAN_PORT
+echo ${CLUSTER_NAME}
 echo "******************************************************************************"
 echo "Do grid software-only installation." `date`
 echo "******************************************************************************"

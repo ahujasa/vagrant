@@ -23,13 +23,6 @@ systemctl stop firewalld
 systemctl disable firewalld
 
 echo "******************************************************************************"
-echo "Setup proxy." `date`
-echo "******************************************************************************"
-tee -a /etc/yum.conf <<EOF
-proxy=http://www-proxy.us.oracle.com:80
-EOF
-
-echo "******************************************************************************"
 echo "Install dnsmasq." `date`
 echo "******************************************************************************"
 yum install -y dnsmasq

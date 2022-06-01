@@ -87,7 +87,8 @@ echo "Unzip grid software." `date`
 echo "******************************************************************************"
 cd ${GRID_HOME}
 unzip -oq /vagrant_software/${GRID_SOFTWARE}
-
+echo ${GRID_HOME}
+ls -lrt ${GRID_HOME}
 scp ${GRID_HOME}/cv/rpm/cvuqdisk-1.0.10-1.rpm oracle@${NODE2_HOSTNAME}:/tmp
 
 # Optional cluster verification.

@@ -44,7 +44,8 @@ echo "**************************************************************************
 echo "Create additional diskgroups." `date`
 echo "******************************************************************************"
 . /home/oracle/scripts/grid_env
-
+whereis sqlplus
+sleep 1m
 sqlplus / as sysasm <<EOF
 CREATE DISKGROUP data EXTERNAL REDUNDANCY DISK '/dev/oracleasm/asm-data-disk1'
        ATTRIBUTE 'compatible.asm'='19.0','compatible.rdbms'='19.0';
